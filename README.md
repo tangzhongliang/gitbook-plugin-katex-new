@@ -29,7 +29,7 @@ Or using the templating syntax:
 ```
 
 
-### Comparison with [MathJax](https://github.com/GitbookIO/plugin-mathjax)
-
-- Faster
+### Comparison with [MathJax](https://github.com/GitbookIO/plugin-katex)
+- support more function from katex@0.15.3
+- support neweset style from katex@0.15.3
 
