@@ -23,7 +23,13 @@ module.exports = {
             },
             process: function(blk) {
                 var tex = blk.body;
-                var isInline = !(tex[0] == "\n");
+                var isInline = true;
+                if (tex[0] == "\n"){
+                    isInline = false;
+                }
+                if (tex.length >= 2 && tex[0] == "\r" && tex[1] == "\n"){
+                    isInline = false;
+                }
                 var output = katex.renderToString(tex, {
                     displayMode: !isInline
                 });
