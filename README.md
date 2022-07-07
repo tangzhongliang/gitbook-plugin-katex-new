@@ -16,6 +16,7 @@ then run `gitbook install`.
 ```
 Inline math: $$\int_{-\infty}^\infty g(x) dx$$
 
+Inline math disable $$@, $$(, $${
 
 Block math:
 

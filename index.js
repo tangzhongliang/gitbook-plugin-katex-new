@@ -30,6 +30,10 @@ module.exports = {
                 if (tex.length >= 2 && tex[0] == "\r" && tex[1] == "\n"){
                     isInline = false;
                 }
+                if (isInline && tex.length >= 1 && (tex[0] == "@" || tex[0] == "(") || tex[0] == "{")){
+                    // 避免makefile冲突, $$@, $$(includes) $${includes}
+                    return tex;
+                }
                 var output = katex.renderToString(tex, {
                     displayMode: !isInline
                 });
